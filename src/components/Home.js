@@ -22,7 +22,7 @@ function Home() {
       
       {/* Downloadable Resume Button */}
       <a 
-        href="/PRAKASH_MANE_RESUME.pdf"  // Corrected href attribute
+        href="https://github.com/PRM710/Portfolio/blob/master/public/PRAKASH_MANE_RESUME.pdf"  // Corrected href attribute
         download="PRAKASH_MANE_RESUME.pdf" 
         className="download-button" 
         onClick={playSound} // Play sound on click

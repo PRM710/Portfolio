@@ -22,7 +22,7 @@ function Home() {
       
       {/* Downloadable Resume Button */}
       <a 
-        href="/public/PRAKASH_MANE_RESUME.pdf" 
+        href="href="/PRAKASH_MANE_RESUME.pdf"" 
         download="PRAKASH_MANE_RESUME.pdf" 
         className="download-button" 
         onClick={playSound} // Play sound on click

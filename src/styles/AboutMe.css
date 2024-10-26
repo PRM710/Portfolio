@@ -175,28 +175,29 @@ h3 .contact {
   text-align: center; /* Center the text */
 }
 .top-right-gif {
-  position: absolute; /* Position it absolutely */
-  top: 50px; /* Distance from the top */
-  right: 150px; /* Distance from the right */
-  width: 100px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  z-index: 10; /* Ensure it is on top of other elements */
+  position: absolute;
+  top: 50px;
+  right: 150px;
+  width: 100px;
+  height: auto;
+  z-index: 10;
 }
 
 .top-right-gif:hover {
-  position: absolute; /* Position it absolutely */
-  top: 50px; /* Distance from the top */
-  right: 150px; /* Distance from the right */
-  width: 150px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  z-index: 10; /* Ensure it is on top of other elements */
+  width: 150px;
+  z-index: 10;
 }
 
 .top-right-gif1 {
-  position: absolute; /* Position it absolutely */
-  top: 120px; /* Distance from the top */
-  right: 150px; /* Distance from the right */
-  width: 100px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  z-index: 10; /* Ensure it is on top of other elements */
+  position: absolute;
+  top: 50px; /* Adjusted position */
+  right: 230px;
+  width: 100px;
+  height: auto;
+  z-index: 10;
+}
+
+.top-right-gif1:hover {
+  width: 150px;
+  z-index: 10;
 }

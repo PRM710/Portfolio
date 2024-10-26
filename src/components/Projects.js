@@ -3,8 +3,8 @@ import { Modal, Box } from '@mui/material';
 import '../styles/Projects.css';
 
 function Projects() {
-  const [zoomedImage, setZoomedImage] = useState(null); // To handle zoomed image
-  const [isModalOpen, setIsModalOpen] = useState(false); // To control modal visibility
+  const [zoomedImage, setZoomedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const projectData = [
     {
@@ -25,31 +25,30 @@ function Projects() {
   ];
 
   const handleImageClick = (image) => {
-    setZoomedImage(image); // Set the clicked image to zoom
-    setIsModalOpen(true); // Open the modal
+    setZoomedImage(image);
+    setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
-    setIsModalOpen(false); // Close the modal
-    setZoomedImage(null); // Clear the zoomed image
+    setIsModalOpen(false);
+    setZoomedImage(null);
   };
 
   return (
     <div className="box2">
-      {/* Project blocks with images and descriptions in zigzag format */}
       {projectData.map((project, index) => (
         <div key={index} className={`project-row-new ${index % 2 === 0 ? 'left' : 'right'}`}>
           <div className="project-block-new">
-          <img src="/fire.gif" alt="Decorative" className="containerimg" />
-            <h3>{project.title}</h3> {/* Display project title */}
+            <img src="/fire.gif" alt="Decorative effect" className="containerimg" />
+            <h3>{project.title}</h3>
             <div className="image-row-new">
               {project.images.map((image, imgIndex) => (
                 <img
                   key={imgIndex}
                   src={image}
-                  alt={`${project.title} Image ${imgIndex + 1}`}
+                  alt={`Screenshot of ${project.title}`}
                   className="project-image-new"
-                  onClick={() => handleImageClick(image)} // Handle image click for zooming
+                  onClick={() => handleImageClick(image)}
                 />
               ))}
             </div>
@@ -58,19 +57,20 @@ function Projects() {
         </div>
       ))}
 
-      {/* Modal to display zoomed image */}
       <Modal
         open={isModalOpen}
         onClose={handleCloseModal}
         className="modal"
+        aria-labelledby="zoomed-image-modal"
+        aria-describedby="Displays the zoomed version of the selected project image"
       >
         <Box className="modal-box">
           {zoomedImage && (
-            <img src={zoomedImage} alt="Zoomed" className="zoomed-image" />
+            <img src={zoomedImage} alt="Zoomed project view" className="zoomed-image" />
           )}
         </Box>
       </Modal>
-      <img src="/nightforest.png" alt="Decorative" className="bottom-image-proj" />
+      <img src="/nightforest.png" alt="Forest backdrop" className="bottom-image-proj" />
     </div>
   );
 }

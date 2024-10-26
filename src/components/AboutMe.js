@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { db } from './firebase';
 import { collection, addDoc } from 'firebase/firestore';
-import '../styles/AboutMe.css'; // Ensure this path is correct
+import '../styles/AboutMe.css';
 
 export default function AboutMe() {
   const [feedback, setFeedback] = useState('');
-  const [showPopup, setShowPopup] = useState(false); // State for popup visibility
+  const [showPopup, setShowPopup] = useState(false);
 
-  // Handle feedback submission
   const handleFeedbackSubmit = async () => {
     if (feedback.trim()) {
       try {
@@ -16,13 +15,11 @@ export default function AboutMe() {
           message: feedback,
           timestamp: new Date(),
         });
-        setShowPopup(true); // Show popup on successful submission
-        setFeedback(''); // Reset input field
-        
-        // Hide popup after a few seconds
+        setShowPopup(true);
+        setFeedback('');
         setTimeout(() => {
           setShowPopup(false);
-        }, 3000); // Adjust time as needed
+        }, 3000);
       } catch (error) {
         console.error('Error submitting feedback: ', error);
         alert('Failed to submit feedback');
@@ -36,7 +33,11 @@ export default function AboutMe() {
     <div className="box2">
       <h1 className="flicker">My Name is Prakash Mane!</h1>
       <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" rel="noopener noreferrer">
-      <img src="/heli.gif" alt="Decorative GIF" className="top-right-gif" /></a>
+        <img src="/heli.gif" alt="Decorative GIF" className="top-right-gif" />
+      </a>
+      <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" rel="noopener noreferrer">
+        <img src="/Dontclick.gif" alt="Second Decorative GIF" className="top-right-gif1" />
+      </a>
       <p>
         <h4>
           I am a passionate developer with a keen interest in web development and coding. If you'd like to learn more about my projects, feel free to explore my portfolio below.
@@ -46,7 +47,7 @@ export default function AboutMe() {
         <Link to="/projects">
           <div className="here">Projects and fun!</div>
         </Link>
-      </div><br></br>
+      </div><br />
 
       <p>Thanks for visiting my portfolio—have fun exploring!</p>
 
@@ -82,7 +83,7 @@ export default function AboutMe() {
         <button onClick={handleFeedbackSubmit} className="nes-btn is-primary">
           Submit Feedback
         </button>
-        
+
         {showPopup && (
           <div className="popup-message">
             Thank you for your feedback!

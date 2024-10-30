@@ -28,9 +28,6 @@ export default function Certificates() {
 
   return (
     <div className="box1">
-      <Helmet>
-        <title>Certificates</title>
-      </Helmet>
       {projects.map((project, index) => (
         <div className={`project-container ${index % 2 === 0 ? 'left' : 'right'}`} key={index}>
           <img src={project.img} alt={project.title} className="project-image" />

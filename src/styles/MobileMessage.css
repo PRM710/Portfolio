@@ -1,0 +1,21 @@
+/* src/MobileMessage.css */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Changed to total black */
+    color: white; /* Default text color */
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+    box-sizing: border-box;
+    text-shadow: 0 0 60px rgb(0, 68, 255); /* Blue glow effect */
+  }
+  

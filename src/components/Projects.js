@@ -15,7 +15,7 @@ function Projects() {
     {
       title: 'News-portal',
       images: ['/news1.jpeg', '/news2.jpeg', '/news3.jpeg'],
-      description: "This Website is for live updates about the ongoing new's",
+      description: "This Website is for live updates about the ongoing news",
     },
     {
       title: 'Shopping Plaza',
@@ -40,14 +40,14 @@ function Projects() {
       {projectData.map((project, index) => (
         <div key={index} className={`project-row-new ${index % 2 === 0 ? 'left' : 'right'}`}>
           <div className="project-block-new">
-          <img src="/fire.gif" alt="Decorative" className="containerimg" />
+            <img src="/fire.gif" alt="" className="containerimg" />
             <h3>{project.title}</h3> {/* Display project title */}
             <div className="image-row-new">
               {project.images.map((image, imgIndex) => (
                 <img
                   key={imgIndex}
                   src={image}
-                  alt={`${project.title} Image ${imgIndex + 1}`}
+                  alt={`Preview of ${project.title} - ${imgIndex + 1}`}
                   className="project-image-new"
                   onClick={() => handleImageClick(image)} // Handle image click for zooming
                 />
@@ -70,7 +70,7 @@ function Projects() {
           )}
         </Box>
       </Modal>
-      <img src="/nightforest.png" alt="Decorative" className="bottom-image-proj" />
+      <img src="/nightforest.png" alt="" className="bottom-image-proj" />
       <div className="more">*I DO HAVE MORE PROJECTS, I WILL UPLOAD SOON...*</div>
     </div>
   );

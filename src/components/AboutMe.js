@@ -38,15 +38,15 @@ export default function AboutMe() {
   return (
     <div className="box2">
       <h1 className="flicker">My Name is Prakash Mane!</h1>
-      <img src="./wiseman.png" alt="Static Image" className="top-left-static" />
-      <img src="./oldman.gif" alt="Overlay GIF" className="top-left-gif2 hidden" />
-      <img src="./wisewords.gif" alt="Comment Box GIF" className="top-left-gif3 hidden" />
+      <img src="./wiseman.png"  className="top-left-static" />
+      <img src="./oldman.gif"  className="top-left-gif2 hidden" />
+      <img src="./wisewords.gif"  className="top-left-gif3 hidden" />
       <div className="top-left-static1">wiseman</div>
       <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" rel="noopener noreferrer">
-        <img src="/heli.gif" alt="Decorative GIF" className="top-right-gif" />
+        <img src="/heli.gif" className="top-right-gif" />
       </a>
       <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" rel="noopener noreferrer">
-        <img src="/Dontclick.gif" alt="Second" className="top-right-gif1" />
+        <img src="/Dontclick.gif" className="top-right-gif1" />
       </a>
       <p>
         <h4>

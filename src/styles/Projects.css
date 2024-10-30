@@ -1,0 +1,209 @@
+@keyframes glow {
+    0% { box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.7); }
+    50% { box-shadow: 0 0 25px 10px rgba(0, 123, 255, 0.9); }
+    100% { box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.7); }
+}
+
+body {
+    font-family: 'GamepauseddemoRegular-RpmY6', sans-serif;
+    font-size: 25px;
+    background-color: #28282B;
+}
+
+.container {
+    background-color: black;
+    width: 100%;
+    border-style: solid;
+    height: 200px;
+    color: #F5F5F5; /* Text color */
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.container2 {
+    margin-left: 80px;
+    margin-top: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue; /* Set link color to aliceblue */
+    margin-left: 200px;
+    transition: font-size 0.3s ease; /* Smooth transition */
+    text-shadow: 0 0 15px rgba(0, 123, 255, 0.7), /* Soft blue glow */
+                 0 0 20px rgba(0, 123, 255, 0.7); /* Stronger blue glow */
+}
+
+a:hover {
+    font-size: 40px; /* Increase font size on hover */
+    text-shadow: 0 0 20px rgba(0, 123, 255, 0.7), /* Soft blue glow */
+                 0 0 25px rgba(0, 123, 255, 0.7); /* Stronger blue glow */
+}
+
+.nav-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;            /* Removes default padding */
+    margin: 0;             /* Removes default margin */
+    display: flex;         /* Aligns list items horizontally */
+}
+
+.card {
+    flex: 1 1 calc(33.33% - 40px); /* Allows three cards per row with the gap accounted for */
+    max-width: 400px; /* Adjusted width for the cards */
+    background-color: black !important; /* Forces card background color */
+    color: #F5F5F5 !important; /* Forces text color */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    border: 1px solid transparent; /* Keeps the initial border subtle */
+    border-color: rgba(0, 123, 255, 0.7); /* Blue border color */
+}
+  
+.card:hover {
+    transform: scale(1.1); /* Increases size by 10% when hovered */
+    z-index: 1; /* Ensures the hovered card appears above other cards */
+    animation: glow 1s infinite; /* Apply glowing effect on hover */
+    border: 1px solid rgba(0, 123, 255, 0.7); /* Adds a blue border */
+}
+  
+.card-gif {
+    width: 100%; /* Ensure the GIF takes the full width of the card */
+    height: auto; /* Remove fixed height to allow GIF to maintain its natural aspect ratio */
+    object-fit: contain; /* Ensure the entire GIF fits without being cropped */
+    margin: 0 auto; /* Center the GIF horizontally if needed */
+    display: block; /* Ensure block display to handle proper margin/padding */
+}
+  
+.description {
+    max-height: 100px; /* Initially limit the height of the description */
+    overflow: hidden; /* Hide the overflowed content */
+    transition: max-height 0.3s ease; /* Smooth transition for expanding the description */
+}
+
+.description.expanded {
+    max-height: 500px; /* Expand the description when hovered */
+}
+  
+.box2 {
+    color: #f5f5f5;
+    background-color: black;
+    margin-top: 10px;
+    width: 100%;
+    min-height: 900px; /* Ensures a minimum height */
+    border-style: solid;
+    border-color: #f5f5f5; /* Matches the theme */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Adds padding inside the container */
+    box-sizing: border-box; /* Ensures padding and border are included in the width and height */
+    height: auto; /* Automatically adjusts height based on content */
+}
+  
+.card-container {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap; /* Ensures the cards wrap to the next line */
+    gap: 100px; /* Adjusts the gap between cards */
+    justify-content: center; /* Centers cards horizontally within each row */
+}
+
+.project-row-new {
+    z-index: 2; 
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    margin: 20px 0; /* Margin between project rows */
+  }
+  
+  .project-row-new.left {
+
+    
+    gap: 70px;
+    flex-direction: row; /* Project block on the left, description on the right */
+  }
+  
+  .project-row-new.right {
+    gap: 70px;
+    flex-direction: row-reverse; /* Project block on the right, description on the left */
+  }
+  
+  .project-block-new {
+    background-size: cover; /* Ensures the GIF covers the entire block */
+    background-position: center; /* Centers the GIF within each block */
+    background-repeat: no-repeat; /* Prevents the GIF from repeating */
+    height: 300px;
+    flex: 1; /* Allow blocks to grow and fill available space */
+    margin: 20px; /* Margin around each project block */
+    border: 1px solid #ccc; /* Add border for division */
+    border-radius: 8px; /* Optional: rounded corners */
+    padding: 10px; /* Optional: add some padding */
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.7); /* Blue glow effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+.project-block-new:hover {
+    box-shadow: 0 0 50px rgba(0, 123, 255, 1); /* Stronger blue glow on hover */
+}
+
+  
+  .image-row-new {
+    display: flex;
+    justify-content: center; /* Center images in the row */
+    margin-top: 10px; /* Space above the images */
+  }
+  
+  .project-image-new {
+    width: 160px;
+    height: auto;
+    cursor: pointer;
+    margin: 60px 10px 0 10px; /* Adjust margin as needed */
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+  
+  .project-image-new:hover {
+    transform: scale(1.1); /* Enlarge image on hover */
+  }
+  
+  .project-description-new {
+    flex: 1; /* Allow description to take available space */
+    margin-left: 20px; /* Space between project block and description */
+    margin-top: 10px; /* Space above the description */
+  }
+  
+  .modal-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 100px auto;
+  }
+  
+  .zoomed-image {
+    z-index: 2; 
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .bottom-image-proj {
+    position: absolute; /* Position the image absolutely */
+    bottom: 0; /* Align it to the bottom of the box */
+    left: 0;
+    width: 100%;
+    height: 100%; /* This ensures the aspect ratio is maintained */
+    margin-top: 20px; /* This is not needed, as the image will be at the bottom */
+    z-index: 1; /* Ensure the image is below other content */
+}
+
+.containerimg{
+  object-fit: cover;
+  height: 50px;
+  width: auto;
+}
+
+.more{
+  text-shadow: 0px 0px 50px #28b700; /* Green shadow */
+  align-items: center;
+  bottom: 10px;
+  z-index: 10;
+  position: absolute;
+}

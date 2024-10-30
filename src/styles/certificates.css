@@ -1,0 +1,126 @@
+.box1 {
+    padding-bottom: 100px;
+    margin-top: 10px;
+    color: #F5F5F5;
+    background-color: black;
+    width: 100%;
+    height: auto; /* Only keep height:auto */
+    border-style: solid;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative; /* Make this container relative for absolute positioning */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 15px rgba(34, 0, 228, 0.902), /* Soft blue glow */
+                 0 0 20px rgba(34, 0, 228, 0.902); /* Stronger blue glow */
+}
+
+.project-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px 0;
+    justify-content: space-between;
+    position: relative; /* This is necessary for the absolute positioning of the before pseudo-element */
+}
+
+.project-container.left .project-info,
+.project-container.right .project-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-container:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0; /* Start from the left edge */
+    right: 0; /* Extend to the right edge */
+    height: 2px; /* Thickness of the line */
+    background-color: white;
+    box-shadow: 0 0 15px rgb(2, 104, 222), 0 0 30px rgb(2, 104, 222);
+    z-index: 1;
+    transform: translateY(-50%); /* Center the line vertically */
+}
+
+.project-container.left {
+    right: 100px;
+    flex-direction: row;
+}
+
+.project-container.right {
+    left: 100px;
+    flex-direction: row-reverse;
+}
+
+.project-image {
+    width: 40%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    border: 5px solid transparent; /* Initial transparent border */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for border color and size */
+    border-color: rgb(2, 104, 222); /* Change border color to blue on hover */
+    box-shadow: 0 0 15px rgb(2, 104, 222), 0 0 30px rgb(2, 104, 222); 
+}
+
+.project-image:hover {
+    border-color: rgb(2, 104, 222); /* Change border color to blue on hover */
+    box-shadow: 0 0 60px rgb(2, 104, 222), 0 0 60px rgb(2, 104, 222); /* Add glowing effect to the border */
+    transform: scale(1.1); /* Scale up the image slightly */
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #F5F5F5;
+    position: relative;
+    z-index: 1;
+    flex-grow: 1; /* Allow project info to grow if needed */
+    transition: transform 0.3s ease; /* Smooth transition for the info section */
+}
+
+.project-container:hover .project-info {
+    transform: scale(1.1); /* Scale up the info section slightly when hovered */
+}
+
+.project-info h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.random-line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 10px 0;
+    box-shadow: 0 0 10px blue;
+}
+
+.bottom-image {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+}
+
+.more1{
+    text-shadow: 0px 0px 20px #b70300; /* Green shadow */
+    align-items: center;
+    bottom: 10px;
+    z-index: 10;
+    position: absolute;
+  }

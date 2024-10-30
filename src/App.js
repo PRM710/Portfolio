@@ -5,10 +5,12 @@ import Home from './components/Home';
 import Certificates from './components/Certificates'; // Use uppercase 'Certificates'
 import Projects from './components/Projects';
 import AboutMe from './components/AboutMe';
+import MobileMessage from './components/MobileMessage'; 
 
 function App() {
   return (
     <div className="App">
+      <MobileMessage /> 
       <BrowserRouter>
         <Navbar />
         <Routes>

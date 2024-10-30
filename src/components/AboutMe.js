@@ -38,7 +38,7 @@ export default function AboutMe() {
   return (
     <div className="box2">
       <Helmet>
-        <title>Projects</title>
+        <title>About Me</title>
       </Helmet>
       <h1 className="flicker">My Name is Prakash Mane!</h1>
       <img src="./wiseman.png" className="top-left-static" alt="Wise man static" />

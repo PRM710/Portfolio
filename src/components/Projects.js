@@ -36,6 +36,9 @@ function Projects() {
 
   return (
     <div className="box2">
+      <Helmet>
+        <title>Projects</title>
+      </Helmet>
       {/* Project blocks with images and descriptions in zigzag format */}
       {projectData.map((project, index) => (
         <div key={index} className={`project-row-new ${index % 2 === 0 ? 'left' : 'right'}`}>

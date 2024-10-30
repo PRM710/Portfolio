@@ -10,9 +10,6 @@ function Home() {
 
   return (
     <div className='box1'>
-      <Helmet>
-        <title>Home</title>
-      </Helmet>
       {/* GIFs at the top left and right */}
       <img src="./miniwiz.gif" alt="Left GIF" className="top-left-gif-home" />
       <img src="/Moonclick.gif" alt="Left GIF" className="top-left-gif-home1" />

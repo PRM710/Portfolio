@@ -8,6 +8,11 @@ function Projects() {
 
   const projectData = [
     {
+      title: 'PDF-QUERYING-SYSTEM',
+      images: ['/ai1.png', '/ai2.png', '/ai3.png'],
+      description: 'The application processes user questions by sending them to a backend server, which responds with answers extracted from the PDF content uploaded by user',
+    },
+    {
       title: 'PRM-PIZZA-COMPLEX',
       images: ['/PizzaComplex.png', '/pizza2.png', '/pizza3.png'],
       description: 'This is a simple frontend for a pizza website',
